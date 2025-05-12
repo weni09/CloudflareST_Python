@@ -124,6 +124,7 @@ class CFSpeedTest:
                 updated_content = content + new_block + "\n"
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(updated_content)
+            print(f"hosts 更新成功")
         except Exception as e:
             print(f"更新hosts内容失败：{e}")
 

@@ -46,7 +46,7 @@ class AdguardHandler:
                 "domain": domain,
                 "answer": ip
             })
-        print(f"生成的新new_rewrites: {new_rewrites}")
+        # print(f"生成的新new_rewrites: {new_rewrites}")
         return new_rewrites
 
     def backup_ad_yaml(self):
