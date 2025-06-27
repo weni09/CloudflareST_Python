@@ -10,7 +10,6 @@ import sys
 
 from CFSpeedTest import CFSpeedTest
 from consts import *
-from AdguardHandler import AdguardHandler
 from pathlib import Path
 from func import read_txt
 from SystemInfo import OperatingSystem
@@ -31,6 +30,7 @@ def do_update(with_ad=False):
         else:
             print("hosts 备份失败，不执行更新操作")
         if with_ad:
+            from AdguardHandler import AdguardHandler
             ad_handler = AdguardHandler(ADGUARD_YAML_PATH, ADGUARD_RELOAD)
             if ad_handler.backup_ad_yaml():
                 data = ad_handler.load_yaml()
